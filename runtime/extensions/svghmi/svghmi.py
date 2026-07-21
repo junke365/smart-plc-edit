@@ -24,7 +24,7 @@ from editor.core.POULibrary import POULibrary
 from docutil import open_svg, get_inkscape_path, get_inkscape_env
 
 from util.ProcessLogger import ProcessLogger
-from runtime.typemapping import DebugTypesSize
+from shared.types_mapping import DebugTypesSize
 import targets
 from editor.gui.editors.ConfTreeNodeEditor import ConfTreeNodeEditor
 from editor.core.XSLTransform import XSLTransform

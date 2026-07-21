@@ -32,7 +32,7 @@ import wx
 
 from editor.gui.controls.CustomToolTip import CustomToolTip, TOOLTIP_WAIT_PERIOD
 from editor.gui.editors.DebugViewer import DebugViewer, REFRESH_PERIOD
-from runtime.loglevels import LogLevelsCount, LogLevels
+from shared.loglevels import LogLevelsCount, LogLevels
 from util.BitmapLibrary import GetBitmap
 
 

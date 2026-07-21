@@ -12,13 +12,13 @@ from inspect import getmembers, isfunction
 import erpc
 
 # eRPC service code
-from erpc_interface.erpc_PLCObject.common import PSKID, PLCstatus, TraceVariables, trace_sample, PLCstatus_enum, log_message
-from erpc_interface.erpc_PLCObject.interface import IBeremizPLCObjectService
-from erpc_interface.erpc_PLCObject.server import BeremizPLCObjectServiceService
+from connectors.erpc_interface.erpc_PLCObject.common import PSKID, PLCstatus, TraceVariables, trace_sample, PLCstatus_enum, log_message
+from connectors.erpc_interface.erpc_PLCObject.interface import IBeremizPLCObjectService
+from connectors.erpc_interface.erpc_PLCObject.server import BeremizPLCObjectServiceService
 
 from runtime import GetPLCObjectSingleton as PLC
-from runtime.loglevels import LogLevelsDict
-from runtime.ServicePublisher import ServicePublisher
+from shared.loglevels import LogLevelsDict
+from runtime.server.ServicePublisher import ServicePublisher
 
 
 def ReturnAsLastOutput(method, args_wrapper, *args):

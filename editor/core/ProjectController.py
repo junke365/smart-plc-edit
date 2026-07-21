@@ -64,9 +64,9 @@ from editor.core.PLCControler import PLCControler
 from editor.plcopen.structures import IEC_KEYWORDS
 from editor.plcopen.types_enums import ComputeConfigurationResourceName, ITEM_CONFNODE
 import targets
-from runtime.typemapping import DebugTypesSize, UnpackDebugBuffer, ValueToIECBytes
+from shared.types_mapping import DebugTypesSize, UnpackDebugBuffer, ValueToIECBytes
 from runtime import PlcStatus
-from runtime.loglevels import LogLevelsCount, LogLevels
+from shared.loglevels import LogLevelsCount, LogLevels
 from editor.core.ConfigTreeNode import ConfigTreeNode, XSDSchemaErrorMessage
 from editor.core.POULibrary import UserAddressedException
 

@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 
 from editor.core.ProjectController import ProjectController, ToDoBeforeQuit
 from editor.core.LocalRuntimeMixin import LocalRuntimeMixin
-from runtime.loglevels import LogLevelsCount, LogLevels
+from shared.loglevels import LogLevelsCount, LogLevels
 from runtime import PlcStatus
 
 class Log:

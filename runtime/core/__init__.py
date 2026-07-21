@@ -28,7 +28,7 @@ def LogMessageAndException(msg, exp=None):
 
 def CreatePLCObjectSingleton(*args, **kwargs):
     global _PLCObjectSingleton
-    from runtime.PLCObject import PLCObject  # noqa # pylint: disable=wrong-import-position
+    from runtime.core.PLCObject import PLCObject  # noqa # pylint: disable=wrong-import-position
     _PLCObjectSingleton = PLCObject(*args, **kwargs)
 
 

@@ -15,9 +15,9 @@ from inspect import getmembers, isfunction
 import erpc
 
 # eRPC service code
-from erpc_interface.erpc_PLCObject.interface import IBeremizPLCObjectService
-from erpc_interface.erpc_PLCObject.client import BeremizPLCObjectServiceClient
-from erpc_interface.erpc_PLCObject.common import trace_order, extra_file, PLCstatus_enum
+from connectors.erpc_interface.erpc_PLCObject.interface import IBeremizPLCObjectService
+from connectors.erpc_interface.erpc_PLCObject.client import BeremizPLCObjectServiceClient
+from connectors.erpc_interface.erpc_PLCObject.common import trace_order, extra_file, PLCstatus_enum
 
 import PSKManagement as PSK
 from connectors.ERPC.PSK_Adapter import SSLPSKClientTransport

@@ -36,12 +36,12 @@ import builtins
 from functools import partial
 
 import runtime
-from runtime.eRPCServer import eRPCServer as RPCServer
-from runtime.xenomai import TryPreloadXenomai
+from runtime.server.eRPCServer import eRPCServer as RPCServer
+from runtime.core.xenomai import TryPreloadXenomai
 from runtime import LogMessageAndException
 from runtime import PlcStatus
 from runtime import default_evaluator
-from runtime.Stunnel import ensurePSK
+from runtime.server.Stunnel import ensurePSK
 import util.paths as paths
 
 # In case system time is ajusted, it is better to use
@@ -49,11 +49,11 @@ import util.paths as paths
 # hot-patch threading module to force using monitonic time for all 
 # Thread/Timer/Event/Condition
 
-from runtime.monotonic_time import monotonic
+from runtime.core.monotonic_time import monotonic
 threading._time = monotonic
 
 try:
-    from runtime.spawn_subprocess import Popen
+    from runtime.core.spawn_subprocess import Popen
 except ImportError:
     from subprocess import Popen
 

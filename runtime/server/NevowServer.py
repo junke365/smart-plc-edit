@@ -37,7 +37,7 @@ from formless import configurable
 from twisted.internet import reactor
 
 import util.paths as paths
-from runtime.loglevels import LogLevels, LogLevelsDict
+from shared.loglevels import LogLevels, LogLevelsDict
 from runtime import MainWorker, GetPLCObjectSingleton
 
 PAGE_TITLE = 'Beremiz Runtime Web Interface'

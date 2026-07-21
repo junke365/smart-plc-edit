@@ -35,9 +35,9 @@ from tempfile import mkstemp
 from functools import wraps, partial
 import _ctypes
 
-from runtime.typemapping import TypeTranslator
-from runtime.loglevels import LogLevelsDefault, LogLevelsCount
-from runtime.Stunnel import getPSKID
+from shared.types_mapping import TypeTranslator
+from shared.loglevels import LogLevelsDefault, LogLevelsCount
+from runtime.server.Stunnel import getPSKID
 from runtime import PlcStatus
 from runtime import MainWorker
 from runtime import default_evaluator

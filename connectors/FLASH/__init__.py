@@ -13,10 +13,10 @@ import traceback
 from inspect import getmembers, isfunction
 
 from runtime import PlcStatus
-from runtime.loglevels import LogLevelsCount
+from shared.loglevels import LogLevelsCount
 
 # Re-use ERPC interface definition to make a conforming PLCObject ersatz
-from erpc_interface.erpc_PLCObject.interface import IBeremizPLCObjectService
+from connectors.erpc_interface.erpc_PLCObject.interface import IBeremizPLCObjectService
 from connectors.ConnectorBase import ConnectorBase
 
 NOP_PLCObject = type(

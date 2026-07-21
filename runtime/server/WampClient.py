@@ -41,8 +41,8 @@ from formless import annotate, webform
 import formless
 from nevow import tags, url, static
 from runtime import GetPLCObjectSingleton
-from runtime.Stunnel import getPSKID
-from runtime.loglevels import LogLevelsDict
+from runtime.server.Stunnel import getPSKID
+from shared.loglevels import LogLevelsDict
 
 mandatoryConfigItems = ["ID", "active", "realm", "url"]
 

@@ -214,7 +214,7 @@ _PyOnChangeLast_%(name)s = _%(name)s_ctype.in_dll(PLCBinary,"__%(name)s_onchange
 ##
 
 ## Code for PLC global variable access
-from runtime.typemapping import TypeTranslator
+from shared.types_mapping import TypeTranslator
 import ctypes
 
 _PySafeGetChanges_%(pyextname)s = PLCBinary.PySafeGetChanges_%(location_str)s

@@ -3,7 +3,7 @@
 import os
 from binascii import b2a_base64
 try:
-    from runtime.spawn_subprocess import call
+    from runtime.core.spawn_subprocess import call
 except ImportError:
     from subprocess import call
 

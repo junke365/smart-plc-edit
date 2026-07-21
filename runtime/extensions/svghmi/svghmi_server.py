@@ -11,7 +11,7 @@ from threading import RLock, Timer
 import os, time
 
 try:
-    from runtime.spawn_subprocess import Popen
+    from runtime.core.spawn_subprocess import Popen
 except ImportError:
     from subprocess import Popen
 
@@ -24,7 +24,7 @@ from autobahn.twisted.websocket import WebSocketServerFactory, WebSocketServerPr
 from autobahn.websocket.protocol import WebSocketProtocol
 from autobahn.twisted.resource import  WebSocketResource
 
-from runtime.loglevels import LogLevelsDict
+from shared.loglevels import LogLevelsDict
 from runtime import GetPLCObjectSingleton
 
 max_svghmi_sessions = None

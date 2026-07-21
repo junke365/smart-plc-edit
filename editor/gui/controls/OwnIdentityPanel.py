@@ -5,8 +5,8 @@
 
 import os
 import wx
-import PSKManagement as PSK
-import CertManagement
+import editor.core.PSKManagement as PSK
+import editor.core.CertManagement
 from editor.gui.dialogs.MsgConfirmDialog import MsgConfirmDialog
 
 

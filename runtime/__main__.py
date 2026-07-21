@@ -16,6 +16,6 @@ if _root not in sys.path:
 # Beremiz_service.py 是以脚本方式运行的，需要执行其模块级代码
 import runpy
 runpy.run_path(
-    os.path.join(_root, "runtime", "app", "Beremiz_service.py"),
+    os.path.join(_root, "runtime", "app", "runtime_service.py"),
     run_name="__main__"
 )

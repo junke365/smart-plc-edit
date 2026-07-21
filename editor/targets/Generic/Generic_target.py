@@ -15,7 +15,7 @@ import operator
 import hashlib
 from functools import reduce
 from util.ProcessLogger import ProcessLogger
-from targets.Builder import Builder
+from editor.targets.Builder import Builder
 
 
 includes_re = re.compile(r'\s*#include\s*["<]([^">]*)[">].*')

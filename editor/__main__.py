@@ -16,6 +16,6 @@ if _root not in sys.path:
 # BeremizIDE.py 是以脚本方式运行的，需要执行其模块级代码
 import runpy
 runpy.run_path(
-    os.path.join(_root, "editor", "app", "BeremizIDE.py"),
+    os.path.join(_root, "editor", "app", "ide_app.py"),
     run_name="__main__"
 )

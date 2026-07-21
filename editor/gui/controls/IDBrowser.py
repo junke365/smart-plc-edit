@@ -6,7 +6,7 @@
 
 import wx
 import wx.dataview as dv
-import PSKManagement as PSK
+import editor.core.PSKManagement as PSK
 from editor.core.PSKManagement import *
 from editor.gui.dialogs.MsgConfirmDialog import MsgConfirmDialog
 

@@ -63,7 +63,7 @@ from editor.gui.dialogs.IDManager import IDManager
 from editor.core.PLCControler import PLCControler
 from editor.plcopen.structures import IEC_KEYWORDS
 from editor.plcopen.types_enums import ComputeConfigurationResourceName, ITEM_CONFNODE
-import targets
+import editor.targets
 from shared.types_mapping import DebugTypesSize, UnpackDebugBuffer, ValueToIECBytes
 from runtime import PlcStatus
 from shared.loglevels import LogLevelsCount, LogLevels

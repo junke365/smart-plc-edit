@@ -32,7 +32,7 @@ from time import localtime
 from functools import reduce
 
 import util.paths as paths
-from plcopen import *
+from editor.plcopen import *
 from editor.plcopen.types_enums import *
 from editor.plcopen.InstancesPathCollector import InstancesPathCollector
 from editor.plcopen.POUVariablesCollector import POUVariablesCollector

@@ -28,7 +28,7 @@ from operator import eq
 import re
 from functools import reduce
 
-from plcopen import PLCOpenParser
+from editor.plcopen import PLCOpenParser
 from editor.plcopen.structures import *
 from editor.plcopen.types_enums import *
 

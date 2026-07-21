@@ -8,6 +8,10 @@
 #
 # See COPYING file for copyrights details.
 
+import builtins
+if not hasattr(builtins, '_'):
+    builtins._ = lambda x: x
+
 libraries = [
     ('Native', 'NativeLib.NativeLibrary', True),
     ('Python', 'py_ext.PythonLibrary', True),

@@ -25,7 +25,7 @@
 
 
 ##############################################################################################
-# This file implements an extension to the web server embedded in the Beremiz_service.py     #
+# This file implements an extension to the web server embedded in the runtime_service.py     #
 # runtime manager (webserver is in runtime/NevowServer.py).                                  #
 #                                                                                            #
 # The extension implemented in this file allows for runtime configuration                    #
@@ -413,7 +413,7 @@ def OnModbusButtonSave(**kwargs):
     
     # store to file the new configuration so that 
     # we can recoup the configuration the next time the PLC
-    # has a cold start (i.e. when Beremiz_service.py is retarted)
+    # has a cold start (i.e. when runtime_service.py is retarted)
     _SetModbusSavedConfiguration(WebNode_id, newConfig)
 
     # Configure PLC with the current Modbus parameters

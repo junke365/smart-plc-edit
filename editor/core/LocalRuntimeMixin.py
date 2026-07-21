@@ -35,7 +35,7 @@ class LocalRuntimeMixin():
             self.local_runtime = ProcessLogger(
                 self.local_runtime_log,[
                     LocalRuntimeInterpreterPath,
-                    Bpath("Beremiz_service.py"),
+                    Bpath("runtime_service.py"),
                     "-p", str(self.runtime_port),
                     "-i", LocalHost,
                     {False: "-x 0", True: "-x 1"}[self.use_gui],

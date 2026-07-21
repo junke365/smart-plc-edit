@@ -74,7 +74,7 @@ from editor.gui.dialogs.AboutDialog import ShowAboutDialog
 beremiz_dir = paths.AbsDir(__file__)
 
 
-class PLCOpenEditor(IDEFrame):
+class PlcEditor(IDEFrame):
 
     def _init_coll_FileMenu_Items(self, parent):
         AppendMenu(parent, help='', id=wx.ID_NEW,

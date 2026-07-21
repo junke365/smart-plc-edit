@@ -269,7 +269,7 @@ def OnBacnetButtonSave(**kwargs):
 
     # store to file the new configuration so that 
     # we can recoup the configuration the next time the PLC
-    # has a cold start (i.e. when Beremiz_service.py is retarted)
+    # has a cold start (i.e. when runtime_service.py is retarted)
     _SetBacnetSavedConfiguration(newConfig)
 
     # Configure PLC with the current BACnet parameters

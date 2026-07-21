@@ -23,7 +23,7 @@ Beremiz Targets
 import importlib
 import util.paths as paths
 from os import listdir, path
-import editor.app.features
+import editor.app.features as features
 
 
 targets = {}
@@ -34,14 +34,14 @@ for name in sorted(listdir(__path__[0])):
         path.isdir(dirpath) and
         path.isfile(path.join(dirpath, "__init__.py"))):
         if not features.targets or name in features.targets:
-            module = importlib.import_module(f"targets.{name}")
+            module = importlib.import_module(f"editor.targets.{name}")
             targets[name] = module
             targetchoices.append(getattr(module, f"XSD"))
 
 
 def GetBuilder(targename):
     assert(targename in targets)
-    kls = getattr(importlib.import_module(f"targets.{targename}.{targename}_target"), f"{targename}_target")
+    kls = getattr(importlib.import_module(f"editor.targets.{targename}.{targename}_target"), f"{targename}_target")
     kls.GetTargetName = classmethod(lambda cls: targename) # Add target name to class intependently of class name
     return kls
 

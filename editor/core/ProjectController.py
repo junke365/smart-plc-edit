@@ -44,7 +44,7 @@ from collections import OrderedDict
 
 import wx
 
-import editor.app.features
+import editor.app.features as features
 import connectors
 import util.paths as pathutils
 from util import GetDeveloperMode, GetSDKPath
@@ -63,7 +63,7 @@ from editor.gui.dialogs.IDManager import IDManager
 from editor.core.PLCControler import PLCControler
 from editor.plcopen.structures import IEC_KEYWORDS
 from editor.plcopen.types_enums import ComputeConfigurationResourceName, ITEM_CONFNODE
-import editor.targets
+import editor.targets as targets
 from shared.types_mapping import DebugTypesSize, UnpackDebugBuffer, ValueToIECBytes
 from runtime import PlcStatus
 from shared.loglevels import LogLevelsCount, LogLevels

@@ -233,7 +233,7 @@ class LogPseudoFile(object):
 ID_FILEMENURECENTPROJECTS = wx.NewIdRef()
 
 
-class Beremiz(IDEFrame, LocalRuntimeMixin):
+class SmartPlcIde(IDEFrame, LocalRuntimeMixin):
 
     def _init_utils(self):
         self.ConfNodeMenu = wx.Menu(title='')
@@ -1135,3 +1135,21 @@ class Beremiz(IDEFrame, LocalRuntimeMixin):
                 viewer.AddHighlight(infos[1:], start, end, highlight_type)
         else:
             IDEFrame.ShowHighlight(self, infos, start, end, highlight_type)
+
+
+# -------------------------------------------------------------------------------
+#                        Main Entry Point
+# -------------------------------------------------------------------------------
+
+def main():
+    import builtins
+    builtins.__dict__['_'] = lambda x: x
+
+    app = wx.App()
+    frame = SmartPlcIde(None)
+    frame.Show()
+    app.MainLoop()
+
+
+if __name__ == "__main__":
+    main()

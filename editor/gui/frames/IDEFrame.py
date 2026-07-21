@@ -685,6 +685,64 @@ class IDEFrame(wx.Frame):
 
         self.AUIManager.Update()
 
+    def _apply_dark_theme(self):
+        """应用 Material Design 3 深色主题"""
+        from shared.theme import Theme
+        T = Theme
+
+        # 主窗口背景
+        self.SetBackgroundColour(T.C(T.SURFACE_CONTAINER_HIGH))
+        self.SetForegroundColour(T.C(T.ON_SURFACE))
+
+        # AUI Manager 面板
+        for pane_name in ["MenuToolBar", "EditorToolBar"]:
+            if pane_name in getattr(self, 'Panes', {}):
+                tb = self.Panes[pane_name]
+                tb.SetBackgroundColour(T.C(T.SURFACE_CONTAINER_HIGH))
+                tb.SetForegroundColour(T.C(T.ON_SURFACE_VARIANT))
+
+        # Notebook 深色主题
+        for nb in [self.LeftNoteBook, self.BottomNoteBook, self.RightNoteBook]:
+            nb.SetBackgroundColour(T.C(T.SURFACE_CONTAINER))
+            nb.SetForegroundColour(T.C(T.ON_SURFACE))
+            try:
+                art = nb.GetArtProvider()
+                if art:
+                    art.SetBackgroundColour(T.C(T.SURFACE_CONTAINER))
+                    art.SetInactiveTabColour(T.C(T.SURFACE_CONTAINER_LOW))
+                    art.SetActiveTabColour(T.C(T.SURFACE_CONTAINER_HIGH))
+                    art.SetNormalFont(T.GetFont(10))
+                    art.SetSelectedFont(T.GetFont(10, bold=True))
+            except Exception:
+                pass
+
+        # 主编辑区 Notebook
+        self.TabsOpened.SetBackgroundColour(T.C(T.SURFACE))
+        self.TabsOpened.SetForegroundColour(T.C(T.ON_SURFACE))
+        try:
+            art = self.TabsOpened.GetArtProvider()
+            if art:
+                art.SetBackgroundColour(T.C(T.SURFACE))
+                art.SetInactiveTabColour(T.C(T.SURFACE_CONTAINER_LOW))
+                art.SetActiveTabColour(T.C(T.SURFACE_CONTAINER_HIGH))
+                art.SetNormalFont(T.GetFont(10))
+                art.SetSelectedFont(T.GetFont(10, bold=True))
+        except Exception:
+            pass
+
+        # 项目树
+        self.ProjectTree.SetBackgroundColour(T.C(T.SURFACE_CONTAINER_LOW))
+        self.ProjectTree.SetForegroundColour(T.C(T.ON_SURFACE))
+
+        # 分割窗口
+        self.ProjectPanel.SetBackgroundColour(T.C(T.SURFACE_CONTAINER_LOW))
+
+        # 菜单栏
+        menu_bar = self.GetMenuBar()
+        if menu_bar:
+            menu_bar.SetBackgroundColour(T.C(T.SURFACE_CONTAINER_HIGH))
+            menu_bar.SetForegroundColour(T.C(T.ON_SURFACE_VARIANT))
+
     def __init__(self, parent, enable_debug=False):
         wx.Frame.__init__(self, parent, id=ID_PLCOPENEDITOR, name='IDEFrame',
                           pos=wx.DefaultPosition,
@@ -776,6 +834,8 @@ class IDEFrame(wx.Frame):
 
         self.SetRefreshFunctions()
         self.SetDeleteFunctions()
+
+        self._apply_dark_theme()
 
         wx.CallAfter(self.InitFindDialog)
 
